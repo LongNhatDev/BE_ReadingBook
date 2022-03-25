@@ -13,17 +13,7 @@ const Form = styled.div`
     padding-bottom: 15px;
     font-weight: bold;
   }
-  & input {
-    border: 1px solid lightcoral;
-    line-height: 40px;
-    width: 60%;
-    border-radius: 5px;
-    margin: 10px 0;
-    padding-left: 5px;
-  }
-  & input:hover {
-    border: 1px solid blue;
-  }
+  
   & a {
     text-decoration: none;
     color: #444444;

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import InvalidMessage from "../../../components/InvalidMessage.jsx";
 import BackgroundCSS from "./components/background.jsx";
 import DivlogIn from "./components/divlogin";
 import Form from "./components/form.jsx";
+import Input from "./components/input.jsx";
 import Logo from "./components/logo.jsx";
 
-const login = () => {
+const Login = () => {
+  const [errorEmail, setErrorEmail] = useState(false);
   return (
-    <BackgroundCSS >
+    <BackgroundCSS>
       <DivlogIn>
         <Logo>
           <p>Reading Book</p>
@@ -14,8 +17,31 @@ const login = () => {
         </Logo>
         <Form>
           <h1>Login</h1>
-          <input type="text" name="" id="" placeholder="Enter Email" />
-          <input type="password" name="" id="" placeholder="Enter Password" />
+          <Input
+            type="text"
+            placeholder="Enter Email"
+            className={errorEmail ? "invalid" : ""}
+            onClick={() => {
+              setErrorEmail(false);
+            }}
+            onBlur={(event) => {
+              event.target.value.trim() === ""
+                ? setErrorEmail(true)
+                : setErrorEmail(false);
+            }}
+          />
+          {errorEmail && (
+            <div>
+              <InvalidMessage message="Please fill your email!" />
+            </div>
+          )}
+          <Input
+            type="password"
+            name=""
+            id=""
+            placeholder="Enter Password"
+            onClick={() => {}}
+          />
           <a href=""> Forgot password ?</a>
           <button>LOGIN</button>
         </Form>
@@ -24,4 +50,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
