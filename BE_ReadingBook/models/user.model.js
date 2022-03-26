@@ -22,10 +22,9 @@ const userSchema = new Schema({
   phoneNumber: {
     type: String
   }
-},
-  {
-    timestamps: true
-  });
+}, {
+  timestamps: true
+});
 
 const User = mongoose.model("User", userSchema);
 module.exports = mongoose.model.User || mongoose.model("User", userSchema);
