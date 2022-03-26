@@ -29,6 +29,7 @@ async function registerUser(req, res, next) {
       _id: user._id,
       fullName: user.fullName,
       email: user.email,
+      role : user.roles,
       token: generateToken(user._id),
     })
   } else {
