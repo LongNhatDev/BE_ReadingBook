@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URI, (error) => {
   }
 });
 
-app.use('/api/user', userRouter);
+// app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/v1/users', users);
 app.get('/', function (req, res) {
