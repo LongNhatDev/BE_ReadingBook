@@ -9,6 +9,7 @@ const createError = require('http-errors');
 require('dotenv').config();
 
 const userRouter = require('./routes/user.route');
+const authRouter = require('./routes/auth.route');
 
 var users = require('./routes/users');
 
@@ -29,6 +30,7 @@ mongoose.connect(process.env.MONGO_URI, (error) => {
 });
 
 app.use('/api/user', userRouter);
+app.use('/api/auth', authRouter);
 app.use('/api/v1/users', users);
 app.get('/', function (req, res) {
   res.send('ok');
