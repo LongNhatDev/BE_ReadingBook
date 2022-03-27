@@ -9,9 +9,10 @@ const Form = styled.div`
   align-items: center;
 
   & h1 {
-    color: red;
+    color: #66d049;
     padding-bottom: 15px;
     font-weight: bold;
+  
   }
   
   & a {
@@ -21,15 +22,7 @@ const Form = styled.div`
     margin: 20px 0 10px 0;
   }
 
-  & button {
-    width: 170px;
-    line-height: 40px;
-    background-color: red;
-    color: white;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-  }
+  
 `;
 
 export default Form;

@@ -5,7 +5,7 @@ const Input = styled.input`
   line-height: 40px;
   width: 60%;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 10px 0 5px;
   padding-left: 5px;
 
   :hover {
